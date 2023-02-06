@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import avatar from './avatar.webp';
+import Profile from './profile/Profile';
 function App() {
+
+  const alertme = () => {
+    alert(props.fullName)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile 
+        fullName='Foulen Fleni' 
+        bio ='at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus' 
+        profession='web developer' 
+        alertme={alertme}>
+        <img src={avatar} width= "200px"/>
+      </Profile>
     </div>
   );
 }
